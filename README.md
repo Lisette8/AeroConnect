@@ -15,4 +15,6 @@ The main goal of AeroConnect is to simplify the consultation and management of a
 - `TypeScript`
 
 <h2>📚 What I Learned</h2>
-Through this project, I gained practical experience with AWS cloud services and learned how different components work together to build a modern web application.
+Through this project, we gained hands-on experience in building a full-stack web application.
+We worked on creating and managing data using CRUD operations, implementing user roles and authentication,
+designing REST APIs, and connecting an Angular frontend with a Springboot backend using a relational database.

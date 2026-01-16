@@ -1,17 +1,11 @@
 <h1>✈️ AeroConnect</h1>
 
-<p>This project was designed and implemented as a practical learning experience.</p>
-The goal was to create a real solution to deploy a web app on AWS.
+<b>AeroConnect</b> is a web-based airport management application developed as part of a university project.
+It provides a modern, secure, and user-friendly solution for managing flights and reservations.
 
 <h2>🎯 Main Objectives</h2>
-
-**•** **Create** a secure cloud network
-
-**•** **Deploy** web servers
-
-**•** **Configure** a load balancer
-
-**•** **Use** a managed database
+The main goal of AeroConnect is to simplify the <b>consultation</b> and <b>management of airline flights</b>
+through a modern web application based on a Springboot and Angular architecture.
 
 <h2>📦 Technologies</h2>
 

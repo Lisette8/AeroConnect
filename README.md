@@ -4,8 +4,7 @@
 It provides a modern, secure, and user-friendly solution for managing flights and reservations.
 
 <h2>🎯 Main Objectives</h2>
-The main goal of AeroConnect is to simplify the <b>consultation</b> and <b>management of airline flights</b>
-through a modern web application based on a Springboot and Angular architecture.
+The main goal of AeroConnect is to simplify the consultation and management of airline flights through a modern web application based on a Springboot and Angular architecture.
 
 <h2>📦 Technologies</h2>
 

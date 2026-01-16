@@ -1,0 +1,198 @@
+<div class="admin-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+          </svg>
+        </div>
+        <span class="logo-text">AeroConnect</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-label">Menu Principal</span>
+      <a routerLink="/vols" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+        </svg>
+        <span>Gestion des vols</span>
+      </a>
+      <a routerLink="/utilisateur-list" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span>Utilisateurs</span>
+      </a>
+      <a routerLink="/reservation-list" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4"/>
+          <path d="M8 2v4"/>
+          <path d="M3 10h18"/>
+          <circle cx="8" cy="14" r="1"/>
+          <circle cx="12" cy="14" r="1"/>
+          <circle cx="16" cy="14" r="1"/>
+        </svg>
+        <span>Réservations</span>
+      </a>
+      <a routerLink="/statistiques" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 3v18h18"/>
+          <path d="m19 9-5 5-4-4-3 3"/>
+        </svg>
+        <span>Statistiques</span>
+      </a>
+      <a routerLink="/feedback" class="nav-item active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+          <path d="M8 9h8"/>
+          <path d="M8 13h6"/>
+        </svg>
+        <span>Feedback</span>
+      </a>
+      <a routerLink="/acceuil" class="nav-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 3h12v18H3z"/>
+          <path d="M21 12H9"/>
+          <path d="M16 7l5 5-5 5"/>
+        </svg>
+        <span>Se déconnecter</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="admin-badge">
+        <div class="admin-avatar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="admin-info">
+          <span class="admin-name">Admin</span>
+          <span class="admin-role">Administrateur</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1>Feedbacks Clients</h1>
+        <span class="breadcrumb">Dashboard / Feedbacks</span>
+      </div>
+    </header>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-value">{{contacts.length}}</span>
+          <span class="stat-label">Total Messages</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-value">{{contacts.length}}</span>
+          <span class="stat-label">Traités</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon purple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-value">{{contacts.length}}</span>
+          <span class="stat-label">Clients Uniques</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <div class="table-header">
+        <h2>Liste des Feedbacks</h2>
+        <div class="table-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" placeholder="Rechercher un feedback..." [(ngModel)]="searchTerm" (input)="filterContacts()">
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Email</th>
+              <th>Téléphone</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contact of filteredContacts">
+              <td>
+                <div class="client-cell">
+                  <div class="client-avatar">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                  <div class="client-info">
+                    <span class="client-name">{{contact.prenom}} {{contact.nom}}</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="email-cell">{{contact.email}}</span>
+              </td>
+              <td>
+                <span class="phone-badge">{{contact.telephone}}</span>
+              </td>
+              <td>
+                <p class="message-cell">{{contact.message}}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty State -->
+      <div *ngIf="filteredContacts.length === 0" class="empty-state">
+        <div class="empty-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+          </svg>
+        </div>
+        <h3>Aucun feedback reçu</h3>
+        <p>Les messages de vos clients apparaîtront ici</p>
+      </div>
+    </div>
+  </main>
+</div>

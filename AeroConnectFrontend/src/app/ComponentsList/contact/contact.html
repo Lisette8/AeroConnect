@@ -1,0 +1,217 @@
+<main class="contact-page">
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="hero-content">
+      <span class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+        </svg>
+        Contactez-nous
+      </span>
+      <h1>Nous sommes là<br/>pour vous aider</h1>
+      <p>Une question, une suggestion ou besoin d'assistance ? Notre équipe est disponible 24/7 pour vous accompagner.</p>
+    </div>
+    
+    <!-- Floating Elements Animation -->
+    <div class="floating-elements">
+      <div class="float-circle circle-1"></div>
+      <div class="float-circle circle-2"></div>
+      <div class="float-circle circle-3"></div>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="contact-info">
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <h3>Téléphone</h3>
+      <p>+216 51 593 549</p>
+      <span class="info-subtitle">Lun - Ven, 9h - 18h</span>
+    </div>
+    
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect width="20" height="16" x="2" y="4" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+      </div>
+      <h3>Email</h3>
+      <p>iyed.aloui&#64;sesame.com.tn</p>
+      <span class="info-subtitle">Réponse sous 24h</span>
+    </div>
+    
+    <div class="info-card">
+      <div class="info-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h3>Adresse</h3>
+      <p>Tunis, Tunisie</p>
+      <span class="info-subtitle">Aéroport International</span>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form-section">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Envoyez-nous un message</h2>
+        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+      </div>
+      
+      <form (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              Nom
+            </label>
+            <input 
+              type="text" 
+              id="nom"
+              class="form-control"
+              [(ngModel)]="contact.nom" 
+              name="nom" 
+              placeholder="Votre nom"
+              required>
+            <div class="input-focus-line"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="prenom">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              Prénom
+            </label>
+            <input 
+              type="text" 
+              id="prenom"
+              class="form-control"
+              [(ngModel)]="contact.prenom" 
+              name="prenom" 
+              placeholder="Votre prénom"
+              required>
+            <div class="input-focus-line"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              Email
+            </label>
+            <input 
+              type="email" 
+              id="email"
+              class="form-control"
+              [(ngModel)]="contact.email" 
+              name="email" 
+              placeholder="votre@email.com"
+              required>
+            <div class="input-focus-line"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="telephone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Téléphone
+            </label>
+            <input 
+              type="tel" 
+              id="telephone"
+              class="form-control"
+              [(ngModel)]="contact.telephone" 
+              name="telephone" 
+              placeholder="+216 XX XXX XXX"
+              required>
+            <div class="input-focus-line"></div>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+            </svg>
+            Message
+          </label>
+          <textarea
+            id="message"
+            class="form-control"
+            [(ngModel)]="contact.message"
+            name="message"
+            rows="5"
+            placeholder="Décrivez votre demande en détail..."
+            required>
+          </textarea>
+          <div class="input-focus-line"></div>
+        </div>
+
+        <button class="btn-submit" type="submit">
+          <span class="btn-text">Envoyer le message</span>
+          <span class="btn-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </span>
+          <div class="btn-shine"></div>
+        </button>
+      </form>
+    </div>
+
+    <!-- Decorative Side Panel -->
+    <div class="form-decoration">
+      <div class="decoration-content">
+        <div class="plane-animation">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+          </svg>
+        </div>
+        <h3>Réponse rapide garantie</h3>
+        <p>Notre équipe s'engage à vous répondre dans les 24 heures suivant votre message.</p>
+        
+        <div class="trust-badges">
+          <div class="badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Support 24/7</span>
+          </div>
+          <div class="badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Données sécurisées</span>
+          </div>
+          <div class="badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Réponse sous 24h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

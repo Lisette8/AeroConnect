@@ -1,0 +1,48 @@
+<header class="app-header">
+  <div class="header-container">
+    
+    <!-- Logo -->
+    <a routerLink="/acceuil" class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+        </svg>
+      </div>
+      <span class="logo-text">AeroConnect</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav-menu">
+      <a routerLink="/reservation" class="nav-link">
+        <span>Réservez</span>
+      </a>
+      <a routerLink="/a-propos" class="nav-link">
+        <span>À propos</span>
+      </a>
+      <a routerLink="/contact" class="nav-link">
+        <span>Contact</span>
+      </a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a routerLink="/login" class="btn-admin">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        Admin
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" (click)="toggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</header>

@@ -1,0 +1,260 @@
+  <div class="admin-layout">
+
+    <!-- Sidebar -->
+    
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <span class="logo-text">AeroConnect</span>
+        </div>
+      </div>
+
+      <nav routerLink="/vols" class="sidebar-nav">
+        <span class="nav-label">Menu Principal</span>
+        <a class="nav-item active">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+          </svg>
+          <span>Gestion des vols</span>
+        </a>
+        <a routerLink="/utilisateur-list" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span>Utilisateurs</span>
+        </a>
+        <a routerLink="/reservation-list" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4"/>
+            <path d="M8 2v4"/>
+            <path d="M3 10h18"/>
+            <circle cx="8" cy="14" r="1"/>
+            <circle cx="12" cy="14" r="1"/>
+            <circle cx="16" cy="14" r="1"/>
+        
+          </svg>
+          <span>Réservations</span>
+        </a>
+        <a routerLink="/statistiques" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/>
+            <path d="m19 9-5 5-4-4-3 3"/>
+          </svg>
+          <span>Statistiques</span>
+        </a>
+        <a routerLink="/feedback" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+            <path d="M8 9h8"/>
+            <path d="M8 13h6"/>
+          </svg>
+          <span>Feedback</span>
+        </a>
+        <a routerLink="/acceuil" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3h12v18H3z"/>
+            <path d="M21 12H9"/>
+            <path d="M16 7l5 5-5 5"/>
+          </svg>
+          <span>Se déconnecter</span>
+        </a>
+      
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-badge">
+          <div class="admin-avatar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="admin-info">
+            <span class="admin-name">Admin</span>
+            <span class="admin-role">Administrateur</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Gestion des Vols</h1>
+          <span class="breadcrumb">Dashboard / Vols</span>
+        </div>
+        <div class="topbar-right">
+          <button (click)="addVol()" class="btn-add">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Nouveau Vol
+          </button>
+        </div>
+      </header>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value">{{vols.length}}</span>
+            <span class="stat-label">Total Vols</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value">{{vols.length}}</span>
+            <span class="stat-label">Vols Actifs</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Partenaires</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" x2="12" y1="2" y2="22"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value">$0.0K</span>
+            <span class="stat-label">Revenus</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Section -->
+      <div class="table-section">
+        <div class="table-header">
+          <h2>Liste des Vols</h2>
+          <div class="table-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" placeholder="Rechercher un vol..." [(ngModel)]="searchTerm" (input)="filterVols()">
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Itinéraire</th>
+                <th>Compagnie</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Durée</th>
+                <th>Prix</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vol of filteredVols">
+                <td>
+                  <div class="route-cell">
+                    <span class="route-from">{{vol.depart}}</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14"/>
+                      <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                    <span class="route-to">{{vol.arrive}}</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="company-cell">
+                    <span class="company-name">{{vol.compagnie}}</span>
+                    <span class="plane-type">{{vol.avion}}</span>
+                  </div>
+                </td>
+                <td>{{vol.dateDepart}}</td>
+                <td>{{vol.timeDepart}}</td>
+                <td><span class="duration-badge">{{vol.time}}</span></td>
+                <td><span class="price-cell">${{vol.prix}}</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button *ngIf="vol.id !== undefined" (click)="showVol(vol.id)" class="action-btn view" title="Voir">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                      </svg>
+                    </button>
+                    <button *ngIf="vol.id !== undefined" (click)="updateVol(vol.id)" class="action-btn edit" title="Modifier">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                      </svg>
+                    </button>
+                    <button *ngIf="vol.id !== undefined" (click)="deleteVol(vol.id)" class="action-btn delete" title="Supprimer">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6"/>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State -->
+        <div *ngIf="vols.length === 0" class="empty-state">
+          <div class="empty-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            </svg>
+          </div>
+          <h3>Aucun vol enregistré</h3>
+          <p>Commencez par ajouter votre premier vol</p>
+          <button (click)="addVol()" class="btn-empty">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Ajouter un vol
+          </button>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>

@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:host {
+  display: block;
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-light: rgba(59, 130, 246, 0.08);
+  --accent-medium: rgba(59, 130, 246, 0.15);
+  --border: #e2e8f0;
+  --radius: 12px;
+  --success: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== HERO SECTION ========== */
+.contact-hero {
+  position: relative;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.contact-hero p {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.float-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent-light);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -50px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: -2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: -4s;
+}
+
+/* ========== CONTACT INFO CARDS ========== */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.info-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.info-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.info-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px -8px rgba(59, 130, 246, 0.15);
+}
+
+.info-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 14px;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.info-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ========== CONTACT FORM SECTION ========== */
+.contact-form-section {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.form-container {
+  flex: 1.5;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  animation: fadeInLeft 0.6s ease-out 0.4s both;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.form-header p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-group {
+  flex: 1;
+  position: relative;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.625rem;
+}
+
+.form-group label svg {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.form-group:focus-within label svg {
+  color: var(--accent);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control:focus {
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Input Focus Line Animation */
+.input-focus-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.form-group:focus-within .input-focus-line {
+  left: 0;
+  width: 100%;
+}
+
+/* Submit Button */
+.btn-submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--text-primary);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.4);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-icon {
+  transform: translateX(4px) translateY(-4px);
+}
+
+.btn-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-submit:hover .btn-shine {
+  left: 100%;
+}
+
+/* ========== DECORATION PANEL ========== */
+.form-decoration {
+  flex: 1;
+  background: linear-gradient(135deg, var(--text-primary) 0%, #1e293b 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  animation: fadeInRight 0.6s ease-out 0.5s both;
+}
+
+.decoration-content {
+  text-align: center;
+  color: white;
+}
+
+.plane-animation {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  color: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.plane-animation svg {
+  transform: rotate(-45deg);
+  animation: planeFloat 3s ease-in-out infinite;
+}
+
+.decoration-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.decoration-content > p {
+  font-size: 0.9375rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.875rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.badge svg {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes planeFloat {
+  0%,
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .contact-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .contact-form-section {
+    flex-direction: column;
+  }
+
+  .form-decoration {
+    order: -1;
+    padding: 2rem;
+  }
+
+  .trust-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .badge {
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-info {
+    padding: 0 1rem 2rem;
+  }
+
+  .info-card {
+    min-width: 100%;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .form-decoration {
+    padding: 1.5rem;
+  }
+
+  .trust-badges {
+    flex-direction: column;
+  }
+
+  .badge {
+    min-width: 100%;
+  }
+
+  .circle-1,
+  .circle-2,
+  .circle-3 {
+    display: none;
+  }
+}

@@ -1,0 +1,131 @@
+<div class="login-wrapper">
+  <div class="login-container">
+
+    <!-- Left Panel - Admin Info -->
+    <div class="admin-panel">
+      <div class="admin-panel-content">
+        
+        <div class="panel-badge">Zone Sécurisée</div>
+        
+        <h2>Espace Administrateur</h2>
+        <p>Gérez vos vols, suivez les réservations et contrôlez votre plateforme depuis un seul endroit.</p>
+
+        <div class="admin-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <span class="feature-title">Gestion des vols</span>
+              <span class="feature-desc">Ajouter, modifier, supprimer</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <span class="feature-title">Utilisateurs</span>
+              <span class="feature-desc">Contrôle des accès</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/>
+                <path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <span class="feature-title">Statistiques</span>
+              <span class="feature-desc">Tableaux de bord en temps réel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-footer">
+          <div class="security-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>Connexion sécurisée SSL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Panel - Login Form -->
+    <div class="login-card">
+      
+      <!-- Header -->
+      <div class="login-header">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+          </svg>
+        </div>
+        <h1>Admin Panel</h1>
+        <p>Entrez votre mot de passe pour continuer</p>
+      </div>
+
+      <!-- Form -->
+      <div class="login-form">
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <div class="input-wrapper" [class.error]="showError">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <input 
+              type="password" 
+              id="password" 
+              [(ngModel)]="password" 
+              (keyup.enter)="onLogin()"
+              placeholder="••••••••"
+              autocomplete="current-password"
+            >
+          </div>
+          <div *ngIf="showError" class="error-message">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" x2="12" y1="8" y2="12"/>
+              <line x1="12" x2="12.01" y1="16" y2="16"/>
+            </svg>
+            Mot de passe incorrect
+          </div>
+        </div>
+
+        <button class="btn-login" (click)="onLogin()">
+          <span>Se connecter</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="login-footer">
+        <a routerLink="/">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          Retour à l'accueil
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>

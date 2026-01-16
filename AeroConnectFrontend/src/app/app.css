@@ -1,0 +1,13 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+/* flex le footer pour ne pas monter... */
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+  }

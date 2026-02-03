@@ -18,3 +18,8 @@ The main goal of AeroConnect is to simplify the consultation and management of a
 Through this project, we gained hands-on experience in building a full-stack web application.
 We worked on creating and managing data using CRUD operations, implementing user roles and authentication,
 designing REST APIs, and connecting an Angular frontend with a Springboot backend using a relational database.
+
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/Jinxiansen/SwiftUI.svg?variant=adaptive)](https://starchart.cc/Jinxiansen/SwiftUI)
+

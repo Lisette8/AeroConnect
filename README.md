@@ -19,7 +19,3 @@ Through this project, we gained hands-on experience in building a full-stack web
 We worked on creating and managing data using CRUD operations, implementing user roles and authentication,
 designing REST APIs, and connecting an Angular frontend with a Springboot backend using a relational database.
 
-
-## Stargazers over time
-[![Stargazers over time](https://github.com/Lisette8/AeroConnect?variant=adaptive)](https://github.com/Lisette8/AeroConnect)
-

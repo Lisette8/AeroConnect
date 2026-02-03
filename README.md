@@ -21,5 +21,5 @@ designing REST APIs, and connecting an Angular frontend with a Springboot backen
 
 
 ## Stargazers over time
-[![Stargazers over time](https://starchart.cc/Jinxiansen/SwiftUI.svg?variant=adaptive)](https://starchart.cc/Jinxiansen/SwiftUI)
+[![Stargazers over time](https://github.com/Lisette8/AeroConnect?variant=adaptive)](https://github.com/Lisette8/AeroConnect)
 
